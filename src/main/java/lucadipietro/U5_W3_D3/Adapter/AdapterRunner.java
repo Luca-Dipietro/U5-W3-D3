@@ -15,5 +15,6 @@ public class AdapterRunner implements CommandLineRunner {
         UserData utente1 = new UserData();
         utente1.getData(infoAdapterUtente1);
         System.out.println("L'utente 1 si chiama " + utente1.getNomeCompleto() + " ed ha " + utente1.getEta() + " anni");
+        System.out.println();
     }
 }
