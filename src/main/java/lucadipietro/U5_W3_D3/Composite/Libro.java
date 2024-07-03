@@ -25,8 +25,8 @@ public class Libro implements Componente{
         this.sezioni.add(sezione);
     }
 
-    public void aggiungiAutore(String autore){
-        this.autori.add(autore);
+    public void aggiungiAutore(String autori){
+        this.autori.add(autori);
     }
 
     @Override
@@ -40,7 +40,7 @@ public class Libro implements Componente{
 
     @Override
     public void stampa() {
-        System.out.println("Stampa l'intero libro");
+        System.out.println("Libro " + titolo);
         for (Sezione sezione : sezioni){
             sezione.stampa();
         }
