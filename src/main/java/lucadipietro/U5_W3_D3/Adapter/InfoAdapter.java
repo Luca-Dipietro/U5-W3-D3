@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.time.ZoneId;
 
 @AllArgsConstructor
 public class InfoAdapter implements DataSource{
@@ -16,6 +17,8 @@ public class InfoAdapter implements DataSource{
 
     @Override
     public int getEta() {
-        return Period.between(info.getDataDiNascita(), LocalDate.now()).getYears();
+        LocalDate dataDiNascita = info.getDataDiNascita().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+        LocalDate oggi = LocalDate.now();
+        return Period.between(dataDiNascita, oggi).getYears();
     }
 }

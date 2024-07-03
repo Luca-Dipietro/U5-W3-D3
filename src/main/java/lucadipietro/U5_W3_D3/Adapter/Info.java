@@ -2,7 +2,7 @@ package lucadipietro.U5_W3_D3.Adapter;
 
 import lombok.*;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -10,5 +10,5 @@ import java.time.LocalDate;
 public class Info {
     private String nome;
     private String cognome;
-    private LocalDate dataDiNascita;
+    private Date dataDiNascita;
 }

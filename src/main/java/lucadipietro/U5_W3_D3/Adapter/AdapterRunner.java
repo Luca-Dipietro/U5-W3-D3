@@ -4,13 +4,15 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
+import java.util.Calendar;
+import java.util.Date;
 
 @Component
 public class AdapterRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         System.out.println("ESERCIZIO 1");
-        Info infoUtente1 = new Info("Luca","Dipietro", LocalDate.of(1997,10,16));
+        Info infoUtente1 = new Info("Luca","Dipietro", new Date(97, Calendar.OCTOBER,16));
         InfoAdapter infoAdapterUtente1 = new InfoAdapter(infoUtente1);
         UserData utente1 = new UserData();
         utente1.getData(infoAdapterUtente1);
